@@ -3,6 +3,8 @@
 <h4>- By Suyash Handa</h6>
 </div>
 
+_NOTE: The sqlite3 database is already populated with some data. You can add more data by updating the `utlils/subjects.xlsx` file and supplying the admin key when prompted._
+
 ## Dev Features
 
 - [x] Tried to maintain modularity and separation of concerns
