@@ -6,7 +6,7 @@ Welcome to the Clash-Free Timetable Generator! This Python application provides 
 - [x] Tried to maintain modularity and separation of concerns
 - [x] Mostly OOP implementation with dependency injection
 - [x] Regular and regex validation for user input
-- [x] Full error handling
+- [x] Tried maximum error handling coverage
 - [x] Colored outputs
 - [x] Admin key (it's `admin`, defined in `.env`)
 - [x] ASCII art
