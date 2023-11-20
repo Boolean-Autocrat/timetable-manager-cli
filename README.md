@@ -1,5 +1,7 @@
-<h1 style="text-align: center;">Clash-Free Timetable Generator</h1>
-Welcome to the Clash-Free Timetable Generator! This Python application provides a user-friendly interface to view course details, add new sections, generate a clash-free timetable, and export the timetable to a CSV file.
+<div align="center">
+<h1>Clash-Free Timetable Generator</h1>
+<h4>- By Suyash Handa</h6>
+</div>
 
 ## Dev Features
 
