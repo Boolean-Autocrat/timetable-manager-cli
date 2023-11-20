@@ -1,5 +1,4 @@
 from app.course import Course
-from app.sections import Section
 from app.timetable import Timetable
 from utils.excel_helper import populate_course
 from utils.colors import colors
