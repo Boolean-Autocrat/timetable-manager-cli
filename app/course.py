@@ -14,7 +14,7 @@ class Course:
         self.connection = connection
         self.cursor = cursor
         self.sections = {}
-        self.exists = True
+        self.course_exists = True
 
         self.cursor.execute(
             """
@@ -26,7 +26,7 @@ class Course:
         result = self.cursor.fetchone()
         if result is None or len(result) == 0:
             print(f"{colors.FAIL}Course not found!{colors.ENDC}")
-            self.exists = False
+            self.course_exists = False
             return
         (
             self.course_name,
@@ -60,7 +60,7 @@ class Course:
                 )
 
     def exists(self):
-        return self.exists
+        return self.course_exists
 
     def get_course_code(self):
         return self.course_code

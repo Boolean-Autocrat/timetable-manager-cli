@@ -128,11 +128,18 @@ def main():
                     else:
                         print(f"{colors.FAIL}Invalid section code!{colors.ENDC}")
                 elif timetable_subchoice == 2:
-                    pass
+                    course_code = color_input("Enter course code: ")
+                    section_id = color_input("Enter section code (eg T1, P6, L1): ")
+                    if re.match(r"^[TPL]\d+$", section_id.strip()):
+                        timetable.unenroll_subject(
+                            Course(course_code, cur, con), section_id
+                        )
+                    else:
+                        print(f"{colors.FAIL}Invalid section code!{colors.ENDC}")
                 elif timetable_subchoice == 3:
-                    pass
+                    timetable.display_timetable()
                 elif timetable_subchoice == 4:
-                    pass
+                    timetable.export_to_csv()
                 elif timetable_subchoice == 5:
                     break
         elif choice == 3:
