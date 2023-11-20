@@ -7,8 +7,8 @@ class Section:
 
     def __get_timeslot(self):
         self.cursor.execute(
-            "SELECT days_of_week, start_time, end_time FROM sections WHERE section = ?",
-            (self.section,),
+            "SELECT days_of_week, start_time, end_time FROM sections WHERE section_id = ?",
+            (f"{self.course.get_course_code()}_{self.section}",),
         )
         result = [i for i in self.cursor.fetchone()]
         result.insert(1, self.course.get_course_code())

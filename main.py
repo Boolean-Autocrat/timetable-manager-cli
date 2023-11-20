@@ -96,7 +96,9 @@ def main():
                         else:
                             print(f"{colors.FAIL}Invalid section code!{colors.ENDC}")
                     elif course_subchoice == 3:
-                        section_type = color_input("Enter section type: ")
+                        section_type = color_input(
+                            "Enter section type (all, lecture, lab, tutorial): "
+                        )
                         course.get_all_sections(section_type.strip())
                     elif course_subchoice == 4:
                         admin_key = color_input("Enter the admin key: ")
@@ -104,7 +106,7 @@ def main():
                     elif course_subchoice == 5:
                         break
         elif choice == 2:
-            timetable = Timetable(cur, con)
+            timetable = Timetable(cur)
             timetable_submenu = {
                 1: "Add a course & section",
                 2: "Remove a course & section",
@@ -112,21 +114,32 @@ def main():
                 4: "Parse timetable to CSV",
                 5: "Back",
             }
-            for key in timetable_submenu:
-                print(str(key) + ". " + timetable_submenu[key])
-            timetable_subchoice = int(color_input("Enter your choice: "))
+            while True:
+                for key in timetable_submenu:
+                    print(str(key) + ". " + timetable_submenu[key])
+                timetable_subchoice = int(color_input("Enter your choice: "))
+                if timetable_subchoice == 1:
+                    course_code = color_input("Enter course code: ")
+                    section_id = color_input("Enter section code (eg T1, P6, L1): ")
+                    if re.match(r"^[TPL]\d+$", section_id.strip()):
+                        timetable.enroll_subject(
+                            Course(course_code, cur, con), section_id
+                        )
+                    else:
+                        print(f"{colors.FAIL}Invalid section code!{colors.ENDC}")
+                elif timetable_subchoice == 2:
+                    pass
+                elif timetable_subchoice == 3:
+                    pass
+                elif timetable_subchoice == 4:
+                    pass
+                elif timetable_subchoice == 5:
+                    break
         elif choice == 3:
             print("Thank you for using the clash-free timetable generator!")
             break
         else:
             print("Invalid choice!")
-
-    exit_flag = False
-    course_code = color_input("Enter course code: ")
-    course = Course(course_code, cur, con)
-    if not course.exists:
-        return
-    print(course)
 
 
 if __name__ == "__main__":

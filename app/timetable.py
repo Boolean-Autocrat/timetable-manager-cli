@@ -5,15 +5,16 @@ import csv
 
 
 class Timetable:
-    def __init__(self):
+    def __init__(self, cursor):
+        self.cursor = cursor
         self.timetable = {}
         self.exam_timetable = {}
 
-    def enroll_subject(self, course: object, section: str):
-        course_section = Section(course)
-        timeslot = course_section.get_datetime(section)
-        timeslot[2] = datetime.strptime(timeslot[2], "%H:%M")
-        timeslot[3] = datetime.strftime(timeslot[3], "%H:%M")
+    def enroll_subject(self, course: object, section_id: str):
+        course_section = Section(section_id, self.cursor, course)
+        timeslot = course_section.get_datetime()
+        timeslot[2] = datetime.strptime(timeslot[2], "%H:%M").time()
+        timeslot[3] = datetime.strptime(timeslot[3], "%H:%M").time()
         days_of_week = timeslot[0].split(",")
         clash = self.check_clashes(days_of_week, timeslot)
         if not clash:
@@ -23,6 +24,7 @@ class Timetable:
                     self.timetable[day].append(timeslot[1:3])
                 else:
                     self.timetable[day].append(timeslot[1:3])
+        print(self.timetable)
 
     def check_clashes(self, days_of_week: list, timeslot: list):
         for day in days_of_week:
@@ -36,9 +38,11 @@ class Timetable:
                         pass
                     else:
                         print(
-                            colors.FAIL
+                            "\n"
+                            + colors.FAIL
                             + f"Clash detected with {subject[0]} on {day}"
                             + colors.ENDC
+                            + "\n"
                         )
                         return True
         return False
