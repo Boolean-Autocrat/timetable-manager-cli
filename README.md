@@ -1,5 +1,5 @@
 <div align="center">
-<h1>Clash-Free Timetable Generator</h1>
+<h1>📚 Clash-Free Timetable Generator</h1>
 <h4>- By Suyash Handa</h6>
 </div>
 
