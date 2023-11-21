@@ -36,28 +36,34 @@ class Course:
             self.credits,
         ) = result
 
+        self.__refresh_sections()
+
+    def __refresh_sections(self):
         query = """
             SELECT section_id, instructors, section_type, days_of_week, start_time, end_time
             FROM sections
             WHERE course_code = ?
         """
-
         self.cursor.execute(query, (self.course_code,))
         result = self.cursor.fetchall()
-
         if result is not None:
             for section in result:
+                section_exists_flag = False
                 if section[2] not in self.sections:
                     self.sections[section[2]] = []
-                self.sections[section[2]].append(
-                    {
-                        "section_id": section[0],
-                        "instructors": section[1],
-                        "days_of_week": section[3],
-                        "start_time": section[4],
-                        "end_time": section[5],
-                    }
-                )
+                for param in self.sections[section[2]]:
+                    if param["section_id"] == section[0]:
+                        section_exists_flag = True
+                if not section_exists_flag:
+                    self.sections[section[2]].append(
+                        {
+                            "section_id": section[0],
+                            "instructors": section[1],
+                            "days_of_week": section[3],
+                            "start_time": section[4],
+                            "end_time": section[5],
+                        }
+                    )
 
     def exists(self):
         return self.course_exists
@@ -120,6 +126,7 @@ class Course:
 
     def get_section(self, section_code: str):
         sections = []
+        print(self.sections)
         for section_type in self.sections:
             for section in self.sections[section_type]:
                 sections.append(section["section_id"].split("_")[1])
@@ -166,6 +173,7 @@ class Course:
             ),
         )
         self.connection.commit()
+        self.__refresh_sections()
 
     def auth_populate_sections(self, key: str, env_key):
         if key == env_key:
@@ -197,9 +205,6 @@ class Course:
                 "end_time": end_time,
             }
             self.__populate_sections(answers["type"].lower(), section_data)
-            if answers["type"].lower() not in self.sections:
-                self.sections[answers["type"].lower()] = []
-            self.sections[answers["type"].lower()].append(section_data)
         else:
             print("Invalid key.")
 
@@ -236,4 +241,21 @@ class Course:
         if not re.match(section_code_regex, section_code):
             print(f"{colors.FAIL}Invalid section code!{colors.ENDC}")
             return False
+        try:
+            start_time = int(start_time.split(":")[0]) * 60 + int(
+                start_time.split(":")[1]
+            )
+            end_time = int(end_time.split(":")[0]) * 60 + int(end_time.split(":")[1])
+        except:
+            print(f"{colors.FAIL}Invalid time!{colors.ENDC}")
+            return False
+
+        if start_time >= end_time:
+            print(f"{colors.FAIL}Start time should be before end time!{colors.ENDC}")
+            return False
+        for section_type in self.sections:
+            for section in self.sections[section_type]:
+                if section["section_id"].split("_")[1] == section_code:
+                    print(f"{colors.FAIL}Section already exists!{colors.ENDC}")
+                    return False
         return True
