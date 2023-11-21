@@ -5,7 +5,7 @@
 
 NOTES:
 
-1. The sqlite3 database is already populated with some data. You can add more data by updating the `utlils/subjects.xlsx` file and supplying the admin key when prompted.
+1. The sqlite3 database is already populated with some data. You can add more data by updating the `utils/subjects.xlsx` file and supplying the admin key when prompted.
 2. A sample generated timetable is already present in the working directory.
 3. Check the `utils/subjects.xlsx` file for existing courses.
 
