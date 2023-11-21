@@ -59,15 +59,15 @@ NOTES:
 ## Screenshots
 
 <details><summary><b>Images (Click to Expand)</b></summary>
-![Screenshot 1](https://github.com/Boolean-Autocrat/timetable-manager-dvm-rec1/blob/main/.github/images/Screenshot1.jpg)
-![Screenshot 2](https://github.com/Boolean-Autocrat/timetable-manager-dvm-rec1/blob/main/.github/images/Screenshot2.jpg)
-![Screenshot 3](https://github.com/Boolean-Autocrat/timetable-manager-dvm-rec1/blob/main/.github/images/Screenshot3.jpg)
-![Screenshot 4](https://github.com/Boolean-Autocrat/timetable-manager-dvm-rec1/blob/main/.github/images/Screenshot4.jpg)
-![Screenshot 5](https://github.com/Boolean-Autocrat/timetable-manager-dvm-rec1/blob/main/.github/images/Screenshot5.jpg)
-![Screenshot 6](https://github.com/Boolean-Autocrat/timetable-manager-dvm-rec1/blob/main/.github/images/Screenshot6.jpg)
-![Screenshot 7](https://github.com/Boolean-Autocrat/timetable-manager-dvm-rec1/blob/main/.github/images/Screenshot7.jpg)
-![Screenshot 8](https://github.com/Boolean-Autocrat/timetable-manager-dvm-rec1/blob/main/.github/images/Screenshot8.jpg)
-![Screenshot 9](https://github.com/Boolean-Autocrat/timetable-manager-dvm-rec1/blob/main/.github/images/Screenshot9.jpg)
+![Screenshot 1](https://raw.githubusercontent.com/Boolean-Autocrat/timetable-manager-dvm-rec1/main/.github/images/Screenshot1.jpg)
+![Screenshot 2](https://raw.githubusercontent.com/Boolean-Autocrat/timetable-manager-dvm-rec1/main/.github/images/Screenshot2.jpg)
+![Screenshot 3](https://raw.githubusercontent.com/Boolean-Autocrat/timetable-manager-dvm-rec1/main/.github/images/Screenshot3.jpg)
+![Screenshot 4](https://raw.githubusercontent.com/Boolean-Autocrat/timetable-manager-dvm-rec1/main/.github/images/Screenshot4.jpg)
+![Screenshot 5](https://raw.githubusercontent.com/Boolean-Autocrat/timetable-manager-dvm-rec1/main/.github/images/Screenshot5.jpg)
+![Screenshot 6](https://raw.githubusercontent.com/Boolean-Autocrat/timetable-manager-dvm-rec1/main/.github/images/Screenshot6.jpg)
+![Screenshot 7](https://raw.githubusercontent.com/Boolean-Autocrat/timetable-manager-dvm-rec1/main/.github/images/Screenshot7.jpg)
+![Screenshot 8](https://raw.githubusercontent.com/Boolean-Autocrat/timetable-manager-dvm-rec1/main/.github/images/Screenshot8.jpg)
+![Screenshot 9](https://raw.githubusercontent.com/Boolean-Autocrat/timetable-manager-dvm-rec1/main/.github/images/Screenshot9.jpg)
 </details>
 
 ## File Structure
