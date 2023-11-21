@@ -25,7 +25,7 @@ class Course:
 
         result = self.cursor.fetchone()
         if result is None or len(result) == 0:
-            print(f"{colors.FAIL}Course not found!{colors.ENDC}")
+            print(f"\n{colors.FAIL}Course not found!{colors.ENDC}\n")
             self.course_exists = False
             return
         (
@@ -73,11 +73,11 @@ class Course:
 
     def get_all_sections(self, section_type: str):
         if section_type.lower() not in ["lecture", "lab", "tutorial", "all"]:
-            print(f"{colors.FAIL}Invalid section type{colors.ENDC}")
+            print(f"\n{colors.FAIL}Invalid section type{colors.ENDC}\n")
 
         elif section_type.lower() == "all":
             if len(self.sections) == 0:
-                print(f"{colors.FAIL}No sections found!{colors.ENDC}")
+                print(f"\n{colors.FAIL}No sections found!{colors.ENDC}\n")
                 return
             print(f"{colors.OKCYAN}Sections for {self.course_code}{colors.ENDC}")
             for item in self.sections:
@@ -98,7 +98,7 @@ class Course:
                     print()
         else:
             if section_type not in self.sections:
-                print(f"{colors.FAIL}No such section type{colors.ENDC}")
+                print(f"\n{colors.FAIL}No such section type{colors.ENDC}\n")
                 return
             print(
                 f"{colors.OKCYAN}{section_type.title()} Sections for {self.course_code}{colors.ENDC}\n"
@@ -125,7 +125,7 @@ class Course:
                 sections.append(section["section_id"].split("_")[1])
 
         if section_code not in sections:
-            print(f"{colors.FAIL}No such section!{colors.ENDC}")
+            print(f"\n{colors.FAIL}No such section!{colors.ENDC}\n")
             return
         else:
             for section_type in self.sections:

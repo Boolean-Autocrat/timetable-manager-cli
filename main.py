@@ -70,8 +70,8 @@ def main():
         if choice == 1:
             course_code = color_input("Enter course code: ")
             course = Course(course_code, cur, con)
-            if not course.exists:
-                break
+            if not course.exists():
+                continue
             else:
                 submenu = {
                     1: "View course details",

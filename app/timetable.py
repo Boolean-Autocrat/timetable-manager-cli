@@ -27,12 +27,19 @@ class Timetable:
             return None
 
     def enroll_subject(self, course: object, section_id: str):
-        if not course.exists:
+        if not course.exists():
             return
         course_section = Section(section_id, self.cursor, course)
-        if not course_section.exists:
-            return
         timeslot = course_section.get_datetime()
+        if timeslot is None:
+            print(
+                "\n"
+                + colors.FAIL
+                + f"Section {section_id} not found for {course.get_course_code()}!"
+                + colors.ENDC
+                + "\n"
+            )
+            return
         timeslot[2] = datetime.strptime(timeslot[2], "%H:%M").time()
         timeslot[3] = datetime.strptime(timeslot[3], "%H:%M").time()
         days_of_week = timeslot[0].split(",")
