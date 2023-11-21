@@ -59,15 +59,15 @@ NOTES:
 ## Screenshots
 
 <details><summary><b>Images (Click to Expand)</b></summary>
-(./images/Screenshot1)
-(./images/Screenshot2)
-(./images/Screenshot3)
-(./images/Screenshot4)
-(./images/Screenshot5)
-(./images/Screenshot6)
-(./images/Screenshot7)
-(./images/Screenshot8)
-(./images/Screenshot9)
+![Screenshot 1](.github/images/Screenshot1)
+![Screenshot 2](.github/images/Screenshot2)
+![Screenshot 3](.github/images/Screenshot3)
+![Screenshot 4](.github/images/Screenshot4)
+![Screenshot 5](.github/images/Screenshot5)
+![Screenshot 6](.github/images/Screenshot6)
+![Screenshot 7](.github/images/Screenshot7)
+![Screenshot 8](.github/images/Screenshot8)
+![Screenshot 9](.github/images/Screenshot9)
 </details>
 
 ## File Structure
