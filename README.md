@@ -56,6 +56,20 @@ NOTES:
   python main.py
   ```
 
+## Screenshots
+
+<details><summary><b>Images (Click to Expand)</b></summary>
+(./images/Screenshot1)
+(./images/Screenshot2)
+(./images/Screenshot3)
+(./images/Screenshot4)
+(./images/Screenshot5)
+(./images/Screenshot6)
+(./images/Screenshot7)
+(./images/Screenshot8)
+(./images/Screenshot9)
+</details>
+
 ## File Structure
 
 ```
