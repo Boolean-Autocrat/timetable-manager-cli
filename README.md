@@ -9,6 +9,11 @@ NOTES:
 2. A sample generated timetable is already present in the working directory.
 3. Check the `utils/subjects.xlsx` file for existing courses.
 
+<div align="center">
+<img src="./.github/images/Screenshot1.jpg" width="600">
+</div>
+___
+
 ## Dev Features
 
 - [x] Tried to maintain modularity and separation of concerns
@@ -57,17 +62,18 @@ NOTES:
   ```
 
 ## Screenshots
-
 <details><summary><b>Images (Click to Expand)</b></summary>
-![Screenshot 1](https://raw.githubusercontent.com/Boolean-Autocrat/timetable-manager-dvm-rec1/main/.github/images/Screenshot1.jpg)
-![Screenshot 2](https://raw.githubusercontent.com/Boolean-Autocrat/timetable-manager-dvm-rec1/main/.github/images/Screenshot2.jpg)
-![Screenshot 3](https://raw.githubusercontent.com/Boolean-Autocrat/timetable-manager-dvm-rec1/main/.github/images/Screenshot3.jpg)
-![Screenshot 4](https://raw.githubusercontent.com/Boolean-Autocrat/timetable-manager-dvm-rec1/main/.github/images/Screenshot4.jpg)
-![Screenshot 5](https://raw.githubusercontent.com/Boolean-Autocrat/timetable-manager-dvm-rec1/main/.github/images/Screenshot5.jpg)
-![Screenshot 6](https://raw.githubusercontent.com/Boolean-Autocrat/timetable-manager-dvm-rec1/main/.github/images/Screenshot6.jpg)
-![Screenshot 7](https://raw.githubusercontent.com/Boolean-Autocrat/timetable-manager-dvm-rec1/main/.github/images/Screenshot7.jpg)
-![Screenshot 8](https://raw.githubusercontent.com/Boolean-Autocrat/timetable-manager-dvm-rec1/main/.github/images/Screenshot8.jpg)
-![Screenshot 9](https://raw.githubusercontent.com/Boolean-Autocrat/timetable-manager-dvm-rec1/main/.github/images/Screenshot9.jpg)
+<div align="center">
+<img src="./.github/images/Screenshot1.jpg" width="800">
+<img src="./.github/images/Screenshot2.jpg" width="800">
+<img src="./.github/images/Screenshot3.jpg" width="800">
+<img src="./.github/images/Screenshot4.jpg" width="800">
+<img src="./.github/images/Screenshot5.jpg" width="800">
+<img src="./.github/images/Screenshot6.jpg" width="800">
+<img src="./.github/images/Screenshot7.jpg" width="800">
+<img src="./.github/images/Screenshot8.jpg" width="800">
+<img src="./.github/images/Screenshot9.jpg" width="800">
+</div>
 </details>
 
 ## File Structure
